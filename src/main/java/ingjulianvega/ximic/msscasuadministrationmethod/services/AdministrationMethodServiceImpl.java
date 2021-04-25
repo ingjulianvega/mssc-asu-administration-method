@@ -29,7 +29,7 @@ public class AdministrationMethodServiceImpl implements AdministrationMethodServ
         log.debug("get()...");
         return AdministrationMethodList
                 .builder()
-                .bodyPartList(administrationMethodMapper.administrationMethodEntityListToAdministrationMethodDtoList(administrationMethodRepository.findAll()))
+                .bodyPartList(administrationMethodMapper.administrationMethodEntityListToAdministrationMethodDtoList(administrationMethodRepository.findAllByOrderByName()))
                 .build();
     }
 

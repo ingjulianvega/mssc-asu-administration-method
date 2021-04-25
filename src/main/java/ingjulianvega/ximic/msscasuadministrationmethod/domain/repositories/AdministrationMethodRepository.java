@@ -4,7 +4,9 @@ import ingjulianvega.ximic.msscasuadministrationmethod.domain.AdministrationMeth
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
+import java.util.List;
 import java.util.UUID;
 
 public interface AdministrationMethodRepository extends JpaRepository<AdministrationMethodEntity, UUID>, JpaSpecificationExecutor<AdministrationMethodEntity> {
+    List<AdministrationMethodEntity> findAllByOrderByName();
 }
