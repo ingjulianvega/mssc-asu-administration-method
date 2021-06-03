@@ -8,7 +8,7 @@ import ingjulianvega.ximic.msscasuadministrationmethod.web.model.AdministrationM
 import java.util.UUID;
 
 public interface AdministrationMethodService {
-    AdministrationMethodList get();
+    AdministrationMethodList get(Boolean usingCache);
 
     AdministrationMethodDto getById(UUID id);
 

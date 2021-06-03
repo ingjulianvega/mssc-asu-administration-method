@@ -9,8 +9,7 @@ contact-url: https://twitter.com/ingjulianvega
 spring:
   application:
     name: @artifactId@
-  profiles:
-    active: local-discovery
+
   h2:
     console:
       enabled: true
@@ -23,9 +22,11 @@ spring:
     jcache:
       config: classpath:ehcache.xml
   #Zipkin
-  zipkin:
-    enabled: false
-#General configuration
+  #zipkin:
+   # baseUrl: http://localhost:9411/
+  #config:
+   # import: optional:configserver:http://localhost:8113
+  #General configuration
 server:
   port: 8094
   servlet:

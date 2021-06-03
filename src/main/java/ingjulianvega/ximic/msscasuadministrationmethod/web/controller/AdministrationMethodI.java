@@ -34,7 +34,7 @@ public interface AdministrationMethodI {
     @RequestMapping(value = "/",
             produces = {"application/json"},
             method = RequestMethod.GET)
-    ResponseEntity<AdministrationMethodList> get();
+    ResponseEntity<AdministrationMethodList> get(@Parameter(in = ParameterIn.QUERY, description = "The using of cache", required = true, schema = @Schema()) Boolean usingCache);
 
     @Operation(summary = "Endpoint to get the information of an administration method given the id", description = "Returns an administration method", tags = {"administration method"})
     @ApiResponses(value = {

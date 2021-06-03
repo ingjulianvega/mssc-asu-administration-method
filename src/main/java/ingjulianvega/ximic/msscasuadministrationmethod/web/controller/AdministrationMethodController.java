@@ -21,8 +21,8 @@ public class AdministrationMethodController implements AdministrationMethodI {
     private final AdministrationMethodService administrationMethodService;
 
     @Override
-    public ResponseEntity<AdministrationMethodList> get() {
-        return new ResponseEntity<>(administrationMethodService.get(), HttpStatus.OK);
+    public ResponseEntity<AdministrationMethodList> get(Boolean usingCache) {
+        return new ResponseEntity<>(administrationMethodService.get(usingCache), HttpStatus.OK);
     }
 
     @Override

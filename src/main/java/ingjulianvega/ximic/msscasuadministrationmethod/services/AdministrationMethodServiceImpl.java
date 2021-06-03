@@ -23,9 +23,9 @@ public class AdministrationMethodServiceImpl implements AdministrationMethodServ
     private final AdministrationMethodRepository administrationMethodRepository;
     private final AdministrationMethodMapper administrationMethodMapper;
 
-    @Cacheable(cacheNames = "administrationMethodListCache")
+    @Cacheable(cacheNames = "administrationMethodListCache", condition = "#usingCache == false")
     @Override
-    public AdministrationMethodList get() {
+    public AdministrationMethodList get(Boolean usingCache) {
         log.debug("get()...");
         return AdministrationMethodList
                 .builder()
