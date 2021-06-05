@@ -16,5 +16,5 @@ public class AdministrationMethodList implements Serializable {
 
     static final long serialVersionUID = 5416901418068390538L;
 
-    public ArrayList<AdministrationMethodDto> bodyPartList;
+    public ArrayList<AdministrationMethodDto> administrationMethodList;
 }
