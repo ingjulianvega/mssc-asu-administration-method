@@ -6,11 +6,11 @@
     <parent>
         <groupId>ingjulianvega.ximic</groupId>
         <artifactId>mssc-asu-bom</artifactId>
-        <version>0.0.2-SNAPSHOT</version>
+        <version>0.0.3-SNAPSHOT</version>
     </parent>
 
     <artifactId>mssc-asu-administration-method</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.5-SNAPSHOT</version>
     <name>mssc-asu-administration-method</name>
     <description>ASU administration method management microservice (via de administración)</description>
 </project>
