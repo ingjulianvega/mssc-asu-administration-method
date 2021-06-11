@@ -42,4 +42,8 @@ administration-method:
   prefix: 'API-MD:'
   error:
     general: There was an unexpected error. Please try again.
-
+#Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://netflix:eureka@localhost:8761/eureka
