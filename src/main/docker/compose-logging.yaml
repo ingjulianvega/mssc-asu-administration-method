@@ -332,6 +332,66 @@ services:
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
+  symptom:
+    image: ingjulianvega/mssc-asu-symptom
+    ports:
+      - 8090:8090
+    depends_on:
+      - eureka
+    restart: on-failure
+    environment:
+      SPRING_PROFILES_ACTIVE: local-discovery
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
+      SPRING_ZIPKIN_BASEURL: http://zipkin
+    labels:
+      collect_logs_with_filebeat: "true"
+      decode_log_event_to_json_object: "true"
+  system:
+    image: ingjulianvega/mssc-asu-system
+    ports:
+      - 8089:8089
+    depends_on:
+      - eureka
+    restart: on-failure
+    environment:
+      SPRING_PROFILES_ACTIVE: local-discovery
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
+      SPRING_ZIPKIN_BASEURL: http://zipkin
+    labels:
+      collect_logs_with_filebeat: "true"
+      decode_log_event_to_json_object: "true"
+  recommendation-type:
+    image: ingjulianvega/mssc-asu-recommendation-type
+    ports:
+      - 8096:8096
+    depends_on:
+      - eureka
+    restart: on-failure
+    environment:
+      SPRING_PROFILES_ACTIVE: local-discovery
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
+      SPRING_ZIPKIN_BASEURL: http://zipkin
+    labels:
+      collect_logs_with_filebeat: "true"
+      decode_log_event_to_json_object: "true"
+  duration:
+    image: ingjulianvega/mssc-asu-duration
+    ports:
+      - 8095:8095
+    depends_on:
+      - eureka
+    restart: on-failure
+    environment:
+      SPRING_PROFILES_ACTIVE: local-discovery
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
+      SPRING_ZIPKIN_BASEURL: http://zipkin
+    labels:
+      collect_logs_with_filebeat: "true"
+      decode_log_event_to_json_object: "true"
   gateway:
     image: ingjulianvega/mssc-asu-gateway:latest
     ports:
