@@ -392,6 +392,51 @@ services:
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
+  visit:
+    image: ingjulianvega/mssc-asu-visit
+    ports:
+      - 8108:8108
+    depends_on:
+      - eureka
+    restart: on-failure
+    environment:
+      SPRING_PROFILES_ACTIVE: local-discovery
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
+      SPRING_ZIPKIN_BASEURL: http://zipkin
+    labels:
+      collect_logs_with_filebeat: "true"
+      decode_log_event_to_json_object: "true"
+  system-check:
+    image: ingjulianvega/mssc-asu-system-check
+    ports:
+      - 8104:8104
+    depends_on:
+      - eureka
+    restart: on-failure
+    environment:
+      SPRING_PROFILES_ACTIVE: local-discovery
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
+      SPRING_ZIPKIN_BASEURL: http://zipkin
+    labels:
+      collect_logs_with_filebeat: "true"
+      decode_log_event_to_json_object: "true"
+  body-check:
+    image: ingjulianvega/mssc-asu-body-check
+    ports:
+      - 8103:8103
+    depends_on:
+      - eureka
+    restart: on-failure
+    environment:
+      SPRING_PROFILES_ACTIVE: local-discovery
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
+      SPRING_ZIPKIN_BASEURL: http://zipkin
+    labels:
+      collect_logs_with_filebeat: "true"
+      decode_log_event_to_json_object: "true"
   gateway:
     image: ingjulianvega/mssc-asu-gateway:latest
     ports:
