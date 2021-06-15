@@ -56,7 +56,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -71,7 +71,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -86,7 +86,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     #      SPRING_ARTEMIS_HOST: jms
     labels:
       collect_logs_with_filebeat: "true"
@@ -102,7 +102,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -117,7 +117,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -132,7 +132,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     #      SPRING_ARTEMIS_HOST: jms
     labels:
       collect_logs_with_filebeat: "true"
@@ -148,7 +148,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -163,7 +163,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -178,7 +178,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -193,7 +193,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -208,7 +208,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -223,7 +223,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -238,7 +238,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -253,7 +253,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -268,7 +268,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -283,7 +283,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -298,7 +298,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -313,7 +313,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -328,7 +328,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -343,7 +343,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -358,7 +358,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -373,7 +373,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -388,7 +388,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -403,7 +403,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -418,7 +418,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -433,7 +433,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -448,7 +448,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -463,7 +463,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -478,7 +478,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -493,7 +493,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -513,7 +513,7 @@ services:
       SPRING_PROFILES_ACTIVE: local-discovery
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
