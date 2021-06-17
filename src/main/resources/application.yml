@@ -39,7 +39,7 @@ logging:
 #Exceptions
 administration-method:
   success: The operation was successful.
-  prefix: 'API-MD:'
+  prefix: @artifactId@
   error:
     general: There was an unexpected error. Please try again.
 #Eureka
