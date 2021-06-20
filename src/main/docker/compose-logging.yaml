@@ -47,14 +47,15 @@ services:
     image: ingjulianvega/mssc-asu-administration-method
     ports:
       - 8094:8094
-    depends_on:
-      - eureka
+#    depends_on:
+#      - eureka
 #      - config
 #      - jms
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+#      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://localhost:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/:9411/
     labels:
@@ -420,6 +421,7 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
+      SPRING_ACTIVEMQ_BROKER-URL: tcp://jms:61616/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -435,6 +437,7 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
+      SPRING_ACTIVEMQ_BROKER-URL: tcp://jms:61616/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -450,6 +453,7 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
+      SPRING_ACTIVEMQ_BROKER-URL: tcp://jms:61616/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -465,6 +469,7 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
+      SPRING_ACTIVEMQ_BROKER-URL: tcp://jms:61616/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -480,6 +485,7 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
+      SPRING_ACTIVEMQ_BROKER-URL: tcp://jms:61616/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
@@ -495,6 +501,7 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
+      SPRING_ACTIVEMQ_BROKER-URL: tcp://jms:61616/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
