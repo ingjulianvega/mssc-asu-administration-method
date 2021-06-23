@@ -72,7 +72,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -87,7 +90,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -102,7 +108,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     #      SPRING_ARTEMIS_HOST: jms
@@ -118,7 +127,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -133,7 +145,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -148,7 +163,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     #      SPRING_ARTEMIS_HOST: jms
@@ -164,7 +182,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -179,7 +200,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -194,7 +218,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -209,7 +236,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -224,7 +254,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -239,7 +272,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -254,7 +290,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -269,7 +308,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -284,7 +326,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -299,7 +344,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -314,7 +362,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -329,7 +380,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -344,7 +398,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -359,7 +416,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -374,7 +434,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -389,7 +452,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -404,7 +470,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
@@ -419,7 +488,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
       SPRING_ACTIVEMQ_BROKER-URL: tcp://jms:61616/
@@ -435,7 +507,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
       SPRING_ACTIVEMQ_BROKER-URL: tcp://jms:61616/
@@ -451,7 +526,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
       SPRING_ACTIVEMQ_BROKER-URL: tcp://jms:61616/
@@ -467,7 +545,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
       SPRING_ACTIVEMQ_BROKER-URL: tcp://jms:61616/
@@ -483,7 +564,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
       SPRING_ACTIVEMQ_BROKER-URL: tcp://jms:61616/
@@ -499,7 +583,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
       SPRING_ACTIVEMQ_BROKER-URL: tcp://jms:61616/
@@ -515,7 +602,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
       SPRING_ACTIVEMQ_BROKER-URL: tcp://jms:61616/
@@ -531,7 +621,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
       SPRING_ACTIVEMQ_BROKER-URL: tcp://jms:61616/
@@ -552,7 +645,10 @@ services:
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery123
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
