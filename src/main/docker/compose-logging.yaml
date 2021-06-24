@@ -67,8 +67,8 @@ services:
     image: ingjulianvega/mssc-asu-arl
     ports:
       - 8084:8084
-    depends_on:
-      - eureka
+#    depends_on:
+#      - eureka
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
@@ -85,8 +85,8 @@ services:
     image: ingjulianvega/mssc-asu-marital-status
     ports:
       - 8080:8080
-    depends_on:
-      - eureka
+#    depends_on:
+#      - eureka
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
@@ -103,8 +103,8 @@ services:
     image: ingjulianvega/mssc-asu-gender
     ports:
       - 8081:8081
-    depends_on:
-      - eureka
+#    depends_on:
+#      - eureka
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
@@ -122,8 +122,8 @@ services:
     image: ingjulianvega/mssc-asu-occupation
     ports:
       - 8082:8082
-    depends_on:
-      - eureka
+#    depends_on:
+#      - eureka
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
@@ -140,8 +140,8 @@ services:
     image: ingjulianvega/mssc-asu-eps
     ports:
       - 8083:8083
-    depends_on:
-      - eureka
+#    depends_on:
+#      - eureka
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
@@ -158,8 +158,8 @@ services:
     image: ingjulianvega/mssc-asu-document-type
     ports:
       - 8085:8085
-    depends_on:
-      - eureka
+#    depends_on:
+#      - eureka
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
@@ -231,8 +231,8 @@ services:
     image: ingjulianvega/mssc-asu-patient
     ports:
       - 8107:8107
-    depends_on:
-      - eureka
+#    depends_on:
+#      - eureka
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
@@ -249,8 +249,8 @@ services:
     image: ingjulianvega/mssc-asu-companion
     ports:
       - 8106:8106
-    depends_on:
-      - eureka
+#    depends_on:
+#      - eureka
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
@@ -483,8 +483,8 @@ services:
     image: ingjulianvega/mssc-asu-visit
     ports:
       - 8108:8108
-    depends_on:
-      - eureka
+#    depends_on:
+#      - eureka
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
