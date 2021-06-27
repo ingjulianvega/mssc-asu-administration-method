@@ -43,26 +43,6 @@ services:
   #  environment:
   #    EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
   #    EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-  administration-method:
-    image: ingjulianvega/mssc-asu-administration-method
-    ports:
-      - 8094:8094
-#    depends_on:
-#      - eureka
-#      - config
-#      - jms
-    restart: on-failure
-    environment:
-      SPRING_PROFILES_ACTIVE: local-discovery
-      #Para conectarse al eureka en docker
-#      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
-      #Para conectar en eureka local
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
-      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/:9411/
-    labels:
-      collect_logs_with_filebeat: "true"
-      decode_log_event_to_json_object: "true"
   arl:
     image: ingjulianvega/mssc-asu-arl
     ports:
@@ -263,24 +243,6 @@ services:
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
-  body-part:
-    image: ingjulianvega/mssc-asu-body-part
-    ports:
-      - 8092:8092
-    depends_on:
-      - eureka
-    restart: on-failure
-    environment:
-      SPRING_PROFILES_ACTIVE: local-discovery
-      #Para conectarse al eureka en docker
-      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
-      #Para conectar en eureka local
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
-      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
-    labels:
-      collect_logs_with_filebeat: "true"
-      decode_log_event_to_json_object: "true"
   disability-type:
     image: ingjulianvega/mssc-asu-disability-type
     ports:
@@ -317,48 +279,12 @@ services:
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
-  concentration:
-    image: ingjulianvega/mssc-asu-concentration
-    ports:
-      - 8105:8105
-    depends_on:
-      - eureka
-    restart: on-failure
-    environment:
-      SPRING_PROFILES_ACTIVE: local-discovery
-      #Para conectarse al eureka en docker
-      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
-      #Para conectar en eureka local
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
-      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
-    labels:
-      collect_logs_with_filebeat: "true"
-      decode_log_event_to_json_object: "true"
   visit-type:
     image: ingjulianvega/mssc-asu-visit-type
     ports:
       - 8109:8109
 #    depends_on:
 #      - eureka
-    restart: on-failure
-    environment:
-      SPRING_PROFILES_ACTIVE: local-discovery
-      #Para conectarse al eureka en docker
-      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
-      #Para conectar en eureka local
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
-      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
-    labels:
-      collect_logs_with_filebeat: "true"
-      decode_log_event_to_json_object: "true"
-  medicine:
-    image: ingjulianvega/mssc-asu-medicine
-    ports:
-      - 8093:8093
-    depends_on:
-      - eureka
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
@@ -461,24 +387,6 @@ services:
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
-  duration:
-    image: ingjulianvega/mssc-asu-duration
-    ports:
-      - 8095:8095
-    depends_on:
-      - eureka
-    restart: on-failure
-    environment:
-      SPRING_PROFILES_ACTIVE: local-discovery
-      #Para conectarse al eureka en docker
-      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
-      #Para conectar en eureka local
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
-      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
-      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
-    labels:
-      collect_logs_with_filebeat: "true"
-      decode_log_event_to_json_object: "true"
   visit:
     image: ingjulianvega/mssc-asu-visit
     ports:
@@ -524,7 +432,7 @@ services:
     ports:
       - 8103:8103
     depends_on:
-      - eureka
+      - body-part
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
@@ -538,12 +446,33 @@ services:
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
+  body-part:
+    image: ingjulianvega/mssc-asu-body-part
+    ports:
+      - 8092:8092
+#    depends_on:
+#      - eureka
+    restart: on-failure
+    environment:
+      SPRING_PROFILES_ACTIVE: local-discovery
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
+      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
+    labels:
+      collect_logs_with_filebeat: "true"
+      decode_log_event_to_json_object: "true"
   treatment:
     image: ingjulianvega/mssc-asu-treatment
     ports:
       - 8102:8102
     depends_on:
-      - eureka
+      - medicine
+      - concentration
+      - administration-method
+      - duration
     restart: on-failure
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery
@@ -554,6 +483,80 @@ services:
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
       SPRING_ACTIVEMQ_BROKER-URL: tcp://jms:61616/
+    labels:
+      collect_logs_with_filebeat: "true"
+      decode_log_event_to_json_object: "true"
+  medicine:
+    image: ingjulianvega/mssc-asu-medicine
+    ports:
+      - 8093:8093
+#    depends_on:
+#      - eureka
+    restart: on-failure
+    environment:
+      SPRING_PROFILES_ACTIVE: local-discovery
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
+      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
+    labels:
+      collect_logs_with_filebeat: "true"
+      decode_log_event_to_json_object: "true"
+  concentration:
+    image: ingjulianvega/mssc-asu-concentration
+    ports:
+      - 8105:8105
+#    depends_on:
+#      - eureka
+    restart: on-failure
+    environment:
+      SPRING_PROFILES_ACTIVE: local-discovery
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
+      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
+    labels:
+      collect_logs_with_filebeat: "true"
+      decode_log_event_to_json_object: "true"
+  administration-method:
+    image: ingjulianvega/mssc-asu-administration-method
+    ports:
+      - 8094:8094
+    #    depends_on:
+    #      - eureka
+    #      - config
+    #      - jms
+    restart: on-failure
+    environment:
+      SPRING_PROFILES_ACTIVE: local-discovery
+      #Para conectarse al eureka en docker
+      #      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
+      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/:9411/
+    labels:
+      collect_logs_with_filebeat: "true"
+      decode_log_event_to_json_object: "true"
+  duration:
+    image: ingjulianvega/mssc-asu-duration
+    ports:
+      - 8095:8095
+#    depends_on:
+#      - eureka
+    restart: on-failure
+    environment:
+      SPRING_PROFILES_ACTIVE: local-discovery
+      #Para conectarse al eureka en docker
+      #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      #Para conectar en eureka local
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
+      EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
+      SPRING_ZIPKIN_BASEURL: http://zipkin:9411/
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"
