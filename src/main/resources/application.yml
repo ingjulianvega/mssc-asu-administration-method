@@ -33,9 +33,9 @@ server:
   servlet:
     context-path: /asu/v1/administration-method
 #Logging
-logging:
-  level:
-    root: DEBUG
+#logging:
+#  level:
+#    root: DEBUG
 #Exceptions
 administration-method:
   success: The operation was successful.

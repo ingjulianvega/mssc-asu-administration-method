@@ -11,6 +11,7 @@ import ingjulianvega.ximic.msscasuadministrationmethod.web.model.AdministrationM
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
@@ -39,7 +40,14 @@ public class AdministrationMethodServiceImpl implements AdministrationMethodServ
         log.debug("getById()...");
         return administrationMethodMapper.administrationMethodEntityToAdministrationMethodDto(
                 administrationMethodRepository.findById(id)
-                        .orElseThrow(() -> new AdministrationMethodException(ErrorCodeMessages.ADMINISTRATION_METHOD_NOT_FOUND, "")));
+                        .orElseThrow(() -> AdministrationMethodException
+                                .builder()
+                                .httpStatus(HttpStatus.BAD_REQUEST)
+                                .apiCode(ErrorCodeMessages.ADMINISTRATION_METHOD_NOT_FOUND_API_CODE)
+                                .error(ErrorCodeMessages.ADMINISTRATION_METHOD_NOT_FOUND_ERROR)
+                                .message(ErrorCodeMessages.ADMINISTRATION_METHOD_NOT_FOUND_MESSAGE)
+                                .solution(ErrorCodeMessages.ADMINISTRATION_METHOD_NOT_FOUND_SOLUTION)
+                                .build()));
     }
 
     @Override
@@ -58,7 +66,14 @@ public class AdministrationMethodServiceImpl implements AdministrationMethodServ
     public void updateById(UUID id, AdministrationMethod administrationMethod) {
         log.debug("updateById...");
         AdministrationMethodEntity evidenceEntity = administrationMethodRepository.findById(id)
-                .orElseThrow(() -> new AdministrationMethodException(ErrorCodeMessages.ADMINISTRATION_METHOD_NOT_FOUND, ""));
+                .orElseThrow(() -> AdministrationMethodException
+                        .builder()
+                        .httpStatus(HttpStatus.BAD_REQUEST)
+                        .apiCode(ErrorCodeMessages.ADMINISTRATION_METHOD_NOT_FOUND_API_CODE)
+                        .error(ErrorCodeMessages.ADMINISTRATION_METHOD_NOT_FOUND_ERROR)
+                        .message(ErrorCodeMessages.ADMINISTRATION_METHOD_NOT_FOUND_MESSAGE)
+                        .solution(ErrorCodeMessages.ADMINISTRATION_METHOD_NOT_FOUND_SOLUTION)
+                        .build());
 
         evidenceEntity.setName(administrationMethod.getName());
 

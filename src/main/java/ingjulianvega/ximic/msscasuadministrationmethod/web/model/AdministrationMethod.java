@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
@@ -15,7 +16,7 @@ import java.io.Serializable;
 public class AdministrationMethod implements Serializable {
 
     static final long serialVersionUID = 4563249978283821775L;
-    @NotNull
+    @NotBlank
     private String name;
 
 }
