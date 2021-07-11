@@ -1,5 +1,6 @@
 package ingjulianvega.ximic.msscasuadministrationmethod.web.controller;
 
+import ingjulianvega.ximic.msscasuadministrationmethod.configuration.AdministrationMethodParameters;
 import ingjulianvega.ximic.msscasuadministrationmethod.configuration.ErrorCodeMessages;
 import ingjulianvega.ximic.msscasuadministrationmethod.exception.AdministrationMethodException;
 import ingjulianvega.ximic.msscasuadministrationmethod.web.model.ApiError;
@@ -20,12 +21,19 @@ import java.util.Map;
 @ControllerAdvice
 public class MvcExceptionHandler extends ResponseEntityExceptionHandler {
 
+    public MvcExceptionHandler(AdministrationMethodParameters administrationMethodParameters) {
+        this.administrationMethodParameters = administrationMethodParameters;
+    }
+
+    AdministrationMethodParameters administrationMethodParameters;
+
+
     @ExceptionHandler(AdministrationMethodException.class)
     public ResponseEntity<ApiError> validationErrorHandler(AdministrationMethodException ame) {
         ApiError apiError = ApiError
                 .builder()
                 .timestamp(LocalDateTime.now())
-                .api("mssc-asu-administration-method")
+                .api(administrationMethodParameters.getApi())
                 .apiCode(ame.getApiCode())
                 .error(ame.getError())
                 .message(ame.getMessage())
@@ -48,7 +56,7 @@ public class MvcExceptionHandler extends ResponseEntityExceptionHandler {
         ApiError apiError = ApiError
                 .builder()
                 .timestamp(LocalDateTime.now())
-                .api("mssc-asu-administration-method")
+                .api(administrationMethodParameters.getApi())
                 .apiCode(ErrorCodeMessages.ARGUMENT_NOT_VALID_API_CODE)
                 .error(ErrorCodeMessages.ARGUMENT_NOT_VALID_ERROR)
                 .message(errors.toString())
