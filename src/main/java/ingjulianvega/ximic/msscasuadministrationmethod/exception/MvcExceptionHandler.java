@@ -1,4 +1,4 @@
-package ingjulianvega.ximic.msscasuadministrationmethod.web.controller;
+package ingjulianvega.ximic.msscasuadministrationmethod.exception;
 
 import ingjulianvega.ximic.msscasuadministrationmethod.configuration.AdministrationMethodParameters;
 import ingjulianvega.ximic.msscasuadministrationmethod.configuration.ErrorCodeMessages;
