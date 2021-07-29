@@ -15,6 +15,7 @@ import java.io.Serializable;
 public class AdministrationMethod implements Serializable {
 
     static final long serialVersionUID = 4563249978283821775L;
+
     @NotBlank
     private String name;
 
